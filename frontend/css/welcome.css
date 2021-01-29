@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+html, body{
+  background: url('https://lh3.googleusercontent.com/QzmoI4DbybydhzZb_bruxfbnT8mo5FgdvatQd8a5CEDAkmN0iXYdHjvHmCJNjwyVYyXz2a8u8P8_Cs_isxENVTaTcly3ZKN797kscCSB0gpFs-iyWdXIMDJBAIO2WupUcZTawO0Ur9k8rsWkOz6arpwQMx-vQPGOjje-TddwG_nsIIpIp3l3Oub9S9v09tBAMSAOd8F-VqGBS0GtIdmvxlDAwK8T2do0pA6DiTX8lS3Vd9QjqKhg8By0ZNulKMCDld-WWu3rfSbWFOSyXGt3HDFzk4OYc4vP2_I7RGibTUlhAr-tud3jTNUZsscdgkzcI2BsLf0oBZTCXOqRBQAffVhisIOpTiAJK-g8ruiHS22VokfzJPO4fw0rmOMVE-PP7Eqk1ya_xMO4xuB6hq_2xqxisYrSY7xUUTudu1ZEPFR6KNPQAy1GdqyXDk4PjqK9kC8DPINgD6TPTVWg8zTQcUp5x5P4sWVwpA_0FJo6ZZ1FAbLHK0u272Im5j2oqZEdNRYdbIkH-h_ofN8H7142rL2r9WJAAfRadJztqtjVwtqdS8FYEjBRUSULDwVL6MWG-kkgh8WCg0iFNBvUJOWztBVaujQFnkyagqoTIH4HRaZM9OuW7YlRq66CEwojxLp0Iw-qz7Cw4owH-0feO2jBkhUt58jSj8g=w1136-h757-no');
+  background-position: center left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 350px;
+}
+
+*{
+  transition: .3s;
+  font-family: 'Josefin Sans';
+}
+
+#Initial-Signature{
+  position: absolute;
+  height: 60px;
+  width: 100px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+#Initial-Signature button{
+  border: none;
+  color: white;
+  background: transparent;
+  width: 100px;
+  height: 60px;
+  cursor: pointer;
+}
+
+#Initial-Signature:hover{
+  animation: Signature-Wiggle 1s 1 ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#Navbar{
+  position: sticky;
+  top: 0px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  max-width: 1346px;
+  background-color: rgba(50,76,115,1);
+  z-index: 3;
+}
+
+#Navbar-Drop-Down{
+  position: relative;
+  width: 125px;
+  height: 0px;
+  float: right;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.Navbar-Button{
+  border: none;
+  background-color: rgba(50,76,115,.8);
+  cursor: pointer;
+  color: rgba(255,255,255,1);
+  font-size: 16px;
+  padding: 0% 20px 0% 20px;
+  height: 50px;
+  width: 100%;
+  transition: .2s;
+}
+
+.Navbar-Button:hover{
+  background-color: rgba(101,130,180,1);
+  transition: .2s;
+}
+
+#Login-Nav-Link{
+  position: absolute;
+  display: inline-block;
+  right: 5px;
+  width: 125px;
+}
+
+#Login-Nav-Link button{
+  height: 60px;
+  width: 100%;
+}
+
+#Entire-Page-Container{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+#Welcome-Page-Container{
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  height: 830px;
+  width: 100%;
+  max-width: 1346px;
+  min-width: 300px;
+  font-family: 'Josefin Sans';
+  color: white;
+  font-size: 30px;
+  background-image: url(https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Welcome-Page-Content{
+  position: relative;
+  top: 20%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding-left: 50px;
+}
+
+#Welcome-Page-Content h1{
+    line-height: 70px;
+}
+
+#Welcome-Page-Content p{
+  position: relative;
+  top: -35px;
+}
+
+#Explore-Button{
+  position: relative;
+  top: -40px;
+  width: 200px;
+  height: 40px;
+  color: rgba(255,255,255,.8);
+  font-size: 15px;
+  font-family: 'Josefin Sans';
+  font-weight: 500;
+  border: 0px solid white;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(50,76,115,.6);
+  transition: .3s ;
+}
+
+#Explore-Button:hover{ 
+  background: rgba(50,76,115,1);
+  color: rgba(255,255,255,1);
+  transition: .6s;
+}
+
+#Features-Container{
+  position: relative;
+  height: 800px;
+  width: 100%;
+  max-width: 1346px;
+  min-width: 300px;
+  background: rgba(210,210,210,1);
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+#Features-Header{
+  text-align: center;
+  width: 625px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  color: rgba(50,76,115,1);
+}
+
+#Feature-Container{
+  display: grid;
+  grid-template-rows: 330px 330px;
+  grid-template-columns: 330px 330px;
+  height: 99%;
+  justify-items: center;
+  justify-content: center;
+  align-content: start;
+}
+
+.Feature{
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  top: 0;
+}
+
+.Feature-Img-Links{
+  width: 100%;
+  height: 100%;
+  transition: .8s;
+}
+
+.Feature:hover .Feature-Img-Links{
+  transform: scale(1.08);
+  transition: .8s;
+}
+
+.Feature-Overlay-Container{
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 75%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(50,76,115,.9);
+  transition: .5s;
+  z-index: 1;
+}
+
+.Feature-Overlay-Text{
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  top: 0%;
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+.Feature-Title-Br{
+  display: none;
+}
+
+.Feature-Overlay-Text span{
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.Feature:hover .Feature-Overlay-Container{
+  z-index: 1;
+  top: 0;
+  transition: .5s;
+}
+
+.Feature:hover .Feature-Overlay-Text{
+  top: 105px;
+  border: 2px solid white;
+  border-width: 2px 0 2px 0;
+  animation: Project-Title-Width-Grow 1s 1;
+}
+
+.Feature:hover .Feature-Title-Br{
+  display: block;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+#Desktop-br{
+  display: block;
+}
+
+#Cellphone-br{
+  display: none;
+}
+
+@keyframes Project-Title-Width-Grow{
+  from {width: 45%;}
+  to {width: 90%;}
+}
+
+@keyframes Signature-Wiggle{
+  0% {transform: rotate(-360deg); }
+  100% {transform: rotate(0deg);}
+}
+
+@media screen and (max-width:750px){
+
+  #Welcome-Page-Container{
+    background-image: url("https://images.unsplash.com/photo-1519332978332-21b7d621d05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+    background-position: top center;
+  }
+  
+  #Welcome-Page-Content{
+    width: 100%;
+    top: 4%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 25px;
+    padding: 0;
+  }
+  
+  #Welcome-Page-Content h1{
+    line-height: 55px;
+  }
+  
+  #Features-Container{
+    height: 220%;
+    min-height: 1550px;
+    max-height: 1600px;
+  }
+  
+  #Features-Header{
+    margin-bottom: 0;
+    width: 50%;
+    min-width: 300px;
+    padding: 5px 10px 0 10px;
+    line-height: 42px
+  }
+  
+  #Feature-Container{
+    grid-template-rows: 325px 330px 330px 330px;
+    grid-template-columns: 500px;
+    align-content: start;
+    align-items: end;
+    align-self: center;
+  }
+  
+  #Desktop-br{
+    display: none;
+  }
+  
+  #Cellphone-br{
+    display: block;
+  }
+  
+}
