@@ -9,16 +9,24 @@
         <div class="cont">
             <div class="form sign-in">
                 <h2>Welcome back,</h2>
-                <label>
-                    <span>Email</span>
-                    <input type="email" />
-                </label>
-                <label>
-                    <span>Password</span>
-                    <input type="password" />
-                </label>
-                <p class="forgot-pass">Forgot password?</p>
-                <button type="button" class="submit">Sign In</button>
+
+                <form id="loginForm" action="/login" method="POST">
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email-l" id="email-l" required >
+                    </label>
+                    <label>
+                        <span>Password</span>
+                        <input type="password" name="password-l" id="password-l" required >
+                    </label>
+                    <p class="forgot-pass">Forgot password?</p>
+                    <button type="submit" class="submit">Sign In</button>
+                </form>
+
+                <div id="success_msg" class="alert alert-success">
+                    <span id="check"></span>
+                </div>
+
             </div>
             <div class="sub-cont">
                 <div class="img">
@@ -32,27 +40,38 @@
                     </div>
                     <div class="img__btn">
                         <span class="m--up">Sign Up</span>
-                        <span class="m--in">Sign In</span>
+                        <span id="login-btn" class="m--in">Sign In</span>
                     </div>
                 </div>
                 <div class="form sign-up">
                     <h2>Time to feel like home,</h2>
-                    <label>
-                        <span>Name</span>
-                        <input type="text" />
-                    </label>
-                    <label>
-                        <span>Email</span>
-                        <input type="email" />
-                    </label>
-                    <label>
-                        <span>Password</span>
-                        <input type="password" />
-                    </label>
-                    <button type="button" class="submit">Sign Up</button>
+
+                    <form id="registerForm" action="/login" method="POST">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name" id="name" required >
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" id="email" required >
+                        </label>
+                        <label>
+                            <span>Password</span>
+                            <input type="password" name="password" id="password" required >
+                        </label>
+                        <button id="signup-submit" type="submit" class="submit">Sign Up</button>
+                    </form>
+
+                    <div id="success_msg" class="alert alert-success">
+                        <span id="check"></span>
+                    </div>
+
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
         <script src = "/js/login.js"></script>
     </body>
 </html>
