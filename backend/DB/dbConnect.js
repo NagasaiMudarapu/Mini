@@ -14,7 +14,6 @@ module.exports.connect=(cb)=>{
         }
     });
 }
-
 module.exports.disconnect=()=>{
     mongoose.disconnect(()=>{
         console.log("DB Disconnected...");

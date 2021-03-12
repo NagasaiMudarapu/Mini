@@ -44,22 +44,44 @@ app.get('/login', function(req, res) {
      
 }) ;
 app.post('/login', function(req, res){
-    console.log("name :", req.body.name) ;
-    var user = {
-        "name" : req.body.name, 
-        "email" : req.body.email,
-        "password" : req.body.password
-    } ;
-    var db = mongoose.connection ;
-    db.collection("users").save(user) ;
-    res.redirect('/login') ;
+    if(req.body.name === undefined)
+    {
+        console.log("Kaushik is Genius") ; 
+        res.redirect('/home') ;   
+    }
+    else 
+    {
+        var user = {
+            "name" : req.body.name, 
+            "email" : req.body.email,
+            "password" : req.body.password
+        } ;
+        var db = mongoose.connection ;
+        db.collection("users").save(user) ;
+        console.log("User Registered Successfully") ;
+        res.redirect('/login') ;
+    }
 })
 
 app.get('/home', function(req, res) {
-    res.sendFile(__dirname + '/frontend/html/dashboard.html') ;
+    res.sendFile(__dirname + '/frontend/html/home.html') ;
 }) ;
 
-
+app.get('/courses', function(req, res){
+    res.sendFile(__dirname + '/frontend/html/courses.html') ;
+});
+app.get('/discussions', function(req, res){
+    res.sendFile(__dirname + '/frontend/html/discussions.html') ;
+});
+app.get('/assignment', function(req, res){
+    res.sendFile(__dirname + '/frontend/html/assignment.html') ;
+});
+app.get('/CFcrawler', function(req, res){
+    res.sendFile(__dirname + '/frontend/html/CFcrawler.html') ;
+});
+app.get('/profile', function(req, res){
+    res.sendFile(__dirname + '/frontend/html/profile.html') ;
+});
 
 app.use((req, res, next) => {
     var err = new Error('File Not Found');
