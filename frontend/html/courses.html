@@ -2,6 +2,9 @@
     <head>
         <title> Courses | LMS Faculty </title>
         <link rel="stylesheet" href="/css/home.css"> 
+        <link rel="stylesheet" href="\css\index.css">
+        <link rel="stylesheet" href="/css/graph.scss"> 
+        
     </head>
     <body>
         <nav class="main-menu">
@@ -47,19 +50,11 @@
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="/profile">
-                        <i class="fa fa-font fa-2x"></i>
-                        <span class="nav-text">
-                           Profile Settings
-                        </span>
-                    </a>
-                </li>
             </ul>
             <ul class="logout">
                 <li>
-                   <a href="#">
-                         <i class="fa fa-power-off fa-2x"></i>
+                    <a href="\login">
+                        <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
                             Logout
                         </span>
@@ -68,9 +63,64 @@
             </ul>
         </nav>
         <div style="margin-left: 60px;">
-            <h1>
-                Courses
-            </h1>
+            <h1>Courses List </h1>
+            <br><br>
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <div class="items-tags">
+                            <a href="/upload" >
+                                <img id="img-tags" src="/imgs/Javacourse.png" alt="Resume" >
+                                <h4 id="id-tags">Java Language</h4>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="items-tags">
+                            <a href="/clock" >
+                                <img id="img-tags" src="/imgs/Pythoncourse.jpg" alt="Clock" >
+                                <h4 id="id-tags">Python Language</h4>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="items-tags">
+                            <a href="/snake" >
+                                <img id="img-tags" src="/imgs/DSCourse.png" alt="Snake Game" >
+                                <h4 id="id-tags">Data Structures</h4>
+                            </a>
+                        </div>    
+                    </td>
+                    <td>
+                        <div class="items-tags">
+                            <a href="#" >
+                                <img id="img-tags" src="/imgs/Ccourse.jfif" alt="Resume" >
+                                <h4 id="id-tags">C Language</h4>
+                            </a>
+                        </div>    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="items-tags">
+                            <a href="/quiz">
+                                <img id="img-tags" src="/imgs/quiz.gif" alt="Quiz" >
+                                <h4 id="id-tags">Quiz</h4>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="items-tags">
+                            <a href="/clock" >
+                                <img id="img-tags" src="/imgs/CPPcourse.jpg" alt="Clock" >
+                                <h4 id="id-tags">C++ Language </h4>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>

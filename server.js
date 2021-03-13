@@ -41,7 +41,6 @@ app.get('/', function(req, res) {
 
 app.get('/login', function(req, res) {
     res.sendFile(__dirname + '/frontend/html/login.html') ;
-     
 }) ;
 app.post('/login', function(req, res){
     if(req.body.name === undefined)
@@ -58,6 +57,27 @@ app.post('/login', function(req, res){
         } ;
         var db = mongoose.connection ;
         db.collection("users").save(user) ;
+        console.log("User Registered Successfully") ;
+        res.redirect('/login') ;
+    }
+})
+app.get('/upload', function(req, res){
+    res.sendFile(__dirname + '/frontend/html/upload.html') ;
+}) ;
+app.post('/upload', function(req, res) {
+    if(req.body.name === undefined)
+    {
+        console.log("Kaushik is Genius") ; 
+        res.redirect('/assignment') ;   
+    }
+    else 
+    {
+        var doc = {
+            "name" : req.body.name, 
+            "file" : req.body.file,
+        } ;
+        var db = mongoose.connection ;
+        db.collection("Assignments").save(doc) ;
         console.log("User Registered Successfully") ;
         res.redirect('/login') ;
     }
